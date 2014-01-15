@@ -49,6 +49,9 @@ class Router(ResourceBase, AdminStateUpMixin):
     def get_outbound_filter_id(self):
         return self.dto['outboundFilterId']
 
+    def get_load_balancer_id(self):
+        return self.dto['loadBalancer']
+
     def name(self, name):
         self.dto['name'] = name
         return self
@@ -63,6 +66,10 @@ class Router(ResourceBase, AdminStateUpMixin):
 
     def outbound_filter_id(self, id_):
         self.dto['outboundFilterId'] = id_
+        return self
+
+    def load_balancer_id(self, load_balancer_id):
+        self.dto['loadBalancer'] = load_balancer_id
         return self
 
     def get_ports(self, query=None):
