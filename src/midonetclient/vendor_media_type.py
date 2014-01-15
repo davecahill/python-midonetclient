@@ -130,3 +130,26 @@ APPLICATION_IP_ADDR_GROUP_ADDR_JSON = \
     "application/vnd.org.midonet.IpAddrGroupAddr-v1+json"
 APPLICATION_IP_ADDR_GROUP_ADDR_COLLECTION_JSON = \
     "application/vnd.org.midonet.collection.IpAddrGroupAddr-v1+json"
+
+# L4LB media types
+APPLICATION_LOAD_BALANCER_JSON = \
+    "application/vnd.org.midonet.LoadBalancer-v1+json"
+APPLICATION_LOAD_BALANCER_COLLECTION_JSON = \
+    "application/vnd.org.midonet.collection.LoadBalancer-v1+json"
+APPLICATION_VIP_JSON = "application/vnd.org.midonet.VIP-v1+json"
+APPLICATION_VIP_COLLECTION_JSON = \
+    "application/vnd.org.midonet.collection.VIP-v1+json"
+APPLICATION_POOL_JSON = "application/vnd.org.midonet.Pool-v1+json"
+APPLICATION_POOL_COLLECTION_JSON = \
+    "application/vnd.org.midonet.collection.Pool-v1+json"
+APPLICATION_POOL_MEMBER_JSON = "application/vnd.org.midonet.PoolMember-v1+json"
+APPLICATION_POOL_MEMBER_COLLECTION_JSON = \
+    "application/vnd.org.midonet.PoolMember-v1+json"
+APPLICATION_HEALTH_MONITOR_JSON = \
+    "application/vnd.org.midonet.HealthMonitor-v1+json"
+APPLICATION_HEALTH_MONITOR_COLLECTION_JSON = \
+    "application/vnd.org.midonet.collection.HealthMonitor-v1+json"
+APPLICATION_POOL_STATISTICS_JSON = \
+    "application/vnd.org.midonet.PoolStatistics-v1+json"
+APPLICATION_POOL_STATISTICS_COLLECTION_JSON = \
+    "application/vnd.org.midonet.collection.PoolStatistics-v1+json"
