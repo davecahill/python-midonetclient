@@ -1462,7 +1462,7 @@ class Router(ObjectType):
                                  value_type = ObjectRef('chain'),
                                  getter = 'get_outbound_filter_id',
                                  setter = 'outbound_filter_id'))
-        self.put_attr(SingleAttr(name = 'loadBalancer',
+        self.put_attr(SingleAttr(name = 'load-balancer',
                                  value_type = ObjectRef('load-balancer'),
                                  getter = 'get_load_balancer_id',
                                  setter = 'load_balancer_id'))
@@ -1896,8 +1896,7 @@ class LoadBalancer(ObjectType):
     """
 
     def __init__(self, obj):
-        super(LoadBalancer, self).__init__(obj)
-
+        ObjectType.__init__(self, obj)
         self.put_attr(SingleAttr(name = 'router',
                                  value_type = ObjectRef('router'),
                                  getter = 'get_router_id',
@@ -1917,7 +1916,7 @@ class VIP(ObjectType):
     """
 
     def __init__(self, obj):
-        super(VIP, self).__init__(obj)
+        ObjectType.__init__(self, obj)
 
         self.put_attr(SingleAttr(name = 'load-balancer',
                                  value_type = ObjectRef('load-balancer'),
@@ -1953,7 +1952,7 @@ class Pool(ObjectType):
     """
 
     def __init__(self, obj):
-        super(Pool, self).__init__(obj)
+        ObjectType.__init__(self, obj)
 
         self.put_attr(SingleAttr(name = 'loadBalancer',
                                  value_type = ObjectRef('load-balancer'),
@@ -1990,7 +1989,7 @@ class PoolMember(ObjectType):
     """
 
     def __init__(self, obj):
-        super(PoolMember, self).__init__(obj)
+        ObjectType.__init__(self, obj)
 
         self.put_attr(SingleAttr(name = 'pool',
                                  value_type = ObjectRef('pool'),
@@ -2018,7 +2017,7 @@ class PoolMember(ObjectType):
                                setter = 'status',
                                writeable = False))
 
-    def type_name():
+    def type_name(self):
         return 'pool-member'
 
 
@@ -2028,7 +2027,7 @@ class HealthMonitor(ObjectType):
     """
 
     def __init__(self, obj):
-        super(HealthMonitor, self).__init__(obj)
+        ObjectType.__init__(self, obj)
 
         self.put_attr(SingleAttr(name = 'delay',
                                  value_type = StringType(),
@@ -2061,7 +2060,7 @@ class HealthMonitor(ObjectType):
                                  list_method = 'get_pools',
                                  factory_method = 'add_pool'))
 
-    def type_name():
+    def type_name(self):
         return 'health-monitor'
 
 
@@ -2071,7 +2070,7 @@ class PoolStatistic(ObjectType):
     """
 
     def __init__(self, obj):
-        super(PoolStatistic, self).__init__(obj)
+        ObjectType.__init__(self, obj)
 
         self.put_attr(SingleAttr(name = 'bytes-in',
                                  value_type = StringType(),
@@ -2094,7 +2093,7 @@ class PoolStatistic(ObjectType):
                                  getter = 'get_pool_id',
                                  setter = 'pool_id'))
 
-    def type_name():
+    def type_name(self):
         return 'pool-statistic'
 
 
